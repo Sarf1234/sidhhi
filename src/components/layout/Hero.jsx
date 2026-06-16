@@ -18,7 +18,7 @@ return ( <section className="relative overflow-hidden bg-white">
           ⭐ 4.5 Rated LED Display Company
         </span> */}
 
-        <h1 className="mt-5 text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
+        <h1 className="mt-5 text-center md:text-left text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
           LED Video Wall Rental
           <span className="block bg-gradient-to-r from-[#7C3AED] to-[#EC4899] bg-clip-text text-transparent">
             Services in Thane
@@ -32,7 +32,7 @@ return ( <section className="relative overflow-hidden bg-white">
           Mumbai and Navi Mumbai.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 mt-8">
+        {/* <div className="flex flex-col sm:flex-row gap-4 mt-8">
 
           <a
             href={`tel:${PHONE}`}
@@ -52,7 +52,7 @@ return ( <section className="relative overflow-hidden bg-white">
             WhatsApp
           </a>
 
-        </div>
+        </div> */}
 
         {/* Trust Points */}
 

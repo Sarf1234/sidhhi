@@ -5,104 +5,182 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
 const PHONE = "+912279614596";
+const WHATSAPP = "https://wa.me/912279614596";
 
 export default function HeroCarousel({ images }) {
-  const [emblaRef] = useEmblaCarousel(
-    {
-      loop: true,
-      dragFree: false,
-    },
-    [
-      Autoplay({
-        delay: 6000,
-      }),
-    ]
-  );
+const [emblaRef] = useEmblaCarousel(
+{
+loop: true,
+dragFree: false,
+},
+[
+Autoplay({
+delay: 6000,
+}),
+]
+);
 
-  return (
-    <section className="relative mt-20">
-      {/* Background Slider */}
-      <div
-        ref={emblaRef}
-        className="overflow-hidden"
-      >
-        <div className="flex">
-          {images.map((src, i) => (
-            <div
-              key={i}
-              className="relative flex-[0_0_100%]"
-            >
-              <div className="relative h-[60vh] min-h-[420px] md:h-[75vh]">
-                <Image
-                  src={src}
-                  alt="LED Video Wall Rental Thane"
-                  fill
-                  priority={i === 0}
-                  sizes="100vw"
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+return ( <section className="relative mt-[72px]">
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/55" />
 
-      {/* Fixed SEO Content */}
-      <div className="absolute inset-0 z-10 flex items-center">
-        <div className="max-w-7xl mx-auto px-5 w-full">
-          <div className="max-w-3xl">
-            {/* <span className="inline-flex rounded-full bg-white/10 backdrop-blur-sm px-4 py-2 text-sm text-white">
-              ⭐ 4.5 Rated LED Display Company
-            </span> */}
+  {/* Slider */}
 
-            <h1 className="mt-5 text-white font-bold text-3xl md:text-5xl lg:text-6xl leading-tight">
-              LED Video Wall Rental Services in Thane
-            </h1>
+  <div
+    ref={emblaRef}
+    className="overflow-hidden"
+  >
+    <div className="flex">
+      {images.map((src, i) => (
+        <div
+          key={i}
+          className="relative flex-[0_0_100%]"
+        >
+          <div className="relative h-[80vh] min-h-[600px] md:h-[75vh]">
 
-            <p className="mt-4 text-white/90 text-base md:text-lg leading-relaxed">
-              SIDDHI ENTERPRISES provides premium indoor and outdoor
-              LED video walls for weddings, exhibitions, corporate
-              events, concerts and live events across Thane,
-              Mumbai and Navi Mumbai.
-            </p>
+            <Image
+              src={src}
+              alt="LED Video Wall Rental Thane"
+              fill
+              priority={i === 0}
+              sizes="100vw"
+              className="object-cover"
+            />
 
-            <div className="flex flex-col sm:flex-row gap-3 mt-7">
-              <a
-                href={`tel:${PHONE}`}
-                className="px-6 py-3 rounded-lg bg-[#7C3AED] text-white font-semibold text-center"
-              >
-                Call Now
-              </a>
-
-              <a
-                href="/contact-us"
-                className="px-6 py-3 rounded-lg bg-[#EC4899] text-white font-semibold text-center"
-              >
-                Get Free Quote
-              </a>
-            </div>
-
-            <div className="flex flex-wrap gap-2 mt-6">
-              {[
-                "Indoor LED Walls",
-                "Outdoor LED Walls",
-                "Wedding Events",
-                "Corporate Events",
-              ].map((item) => (
-                <span
-                  key={item}
-                  className="text-xs md:text-sm bg-white/10 text-white px-3 py-2 rounded-full"
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
           </div>
         </div>
+      ))}
+    </div>
+  </div>
+
+  {/* Overlay */}
+
+  <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+
+  {/* Content */}
+
+  <div className="absolute inset-0 z-10 flex items-center">
+    <div className="max-w-7xl mx-auto w-full px-6 sm:px-8 lg:px-12">
+
+      <div className="max-w-[700px]">
+
+        <span className="inline-flex items-center rounded-full bg-white/10 backdrop-blur-md px-4 py-2 text-xs sm:text-sm text-white border border-white/20">
+          ⭐ Trusted LED Video Wall Rental Company
+        </span>
+
+        <h1
+          className="
+            mt-5
+            text-white
+            font-extrabold
+            leading-tight
+            text-[30px]
+            sm:text-[42px]
+            lg:text-[60px]
+          "
+        >
+          LED Video Wall Rental
+          <span className="block text-[#EC4899]">
+            Services in Thane
+          </span>
+        </h1>
+
+        <p
+          className="
+            mt-4
+            text-white/90
+            text-[15px]
+            sm:text-lg
+            leading-relaxed
+            max-w-[95%]
+            sm:max-w-[650px]
+          "
+        >
+          SIDDHI ENTERPRISES provides premium indoor and outdoor
+          LED video walls for weddings, exhibitions, corporate
+          events, concerts and live shows across Thane,
+          Mumbai and Navi Mumbai.
+        </p>
+
+        {/* CTA Buttons */}
+
+        <div className="flex flex-col sm:flex-row gap-3 mt-7">
+
+          <a
+            href={`tel:${PHONE}`}
+            className="
+              w-full sm:w-auto
+              px-6 py-3
+              rounded-xl
+              bg-[#7C3AED]
+              text-white
+              font-semibold
+              text-center
+              shadow-lg
+              hover:opacity-90
+              transition
+            "
+          >
+            Call Now
+          </a>
+
+          <a
+            href={WHATSAPP}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+              w-full sm:w-auto
+              px-6 py-3
+              rounded-xl
+              bg-[#25D366]
+              text-white
+              font-semibold
+              text-center
+              shadow-lg
+              hover:opacity-90
+              transition
+            "
+          >
+            Get Quote on WhatsApp
+          </a>
+
+        </div>
+
+        {/* Service Tags */}
+
+        <div className="flex flex-wrap gap-2 mt-6 max-w-[700px]">
+
+          {[
+            "Indoor LED Walls",
+            "Outdoor LED Walls",
+            "Wedding Events",
+            "Corporate Events",
+          ].map((item) => (
+            <span
+              key={item}
+              className="
+                text-xs
+                sm:text-sm
+                bg-white/10
+                backdrop-blur
+                text-white
+                px-3 py-2
+                rounded-full
+                border border-white/10
+              "
+            >
+              {item}
+            </span>
+          ))}
+
+        </div>
+
       </div>
-    </section>
-  );
+
+    </div>
+  </div>
+
+</section>
+
+
+);
 }
