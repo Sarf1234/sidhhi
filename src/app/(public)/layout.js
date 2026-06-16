@@ -14,82 +14,138 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://licambikapur.com"),
+metadataBase: new URL("https://siddhienterprises.in"),
 
-  title: {
-    default: "LIC Ambikapur – LIC Plans, Policy Guides & Insurance Advice",
-    template: "%s | LIC Ambikapur",
+title: {
+default:
+"SIDDHI ENTERPRISES | LED Video Wall Rental Services in Thane",
+template: "%s | SIDDHI ENTERPRISES",
+},
+
+description:
+"SIDDHI ENTERPRISES provides premium LED Video Wall Rental services in Thane, Mumbai and Navi Mumbai. Indoor & Outdoor LED Walls, Wedding LED Screens, Corporate Event Displays, Exhibition LED Displays and Event Solutions.",
+
+keywords: [
+"LED Video Wall Rental Thane",
+"LED Wall on Rent Thane",
+"LED Screen Rental Thane",
+"LED Display Services Thane",
+"Indoor LED Wall Rental",
+"Outdoor LED Wall Rental",
+"Wedding LED Screen Rental",
+"Corporate Event LED Display",
+"Exhibition LED Display",
+"Event LED Screen Rental",
+"LED Video Wall Mumbai",
+"LED Wall Rental Navi Mumbai",
+"LED Screen for Events",
+"Stage LED Wall",
+"Concert LED Screen Rental",
+],
+
+alternates: {
+canonical: "https://siddhienterprises.in",
+},
+
+openGraph: {
+title:
+"LED Video Wall Rental Services in Thane | SIDDHI ENTERPRISES",
+
+description:
+  "Premium LED Video Wall Rental services for weddings, exhibitions, corporate events, concerts and live shows across Thane, Mumbai and Navi Mumbai.",
+
+url: "https://siddhienterprises.in",
+
+siteName: "SIDDHI ENTERPRISES",
+
+type: "website",
+
+locale: "en_IN",
+
+images: [
+  {
+    url: "https://res.cloudinary.com/YOUR_CLOUD/image/upload/og-image.jpg",
+    width: 1200,
+    height: 630,
+    alt: "SIDDHI ENTERPRISES LED Video Wall Rental Services",
   },
+],
 
-  description:
-    "Discover the latest LIC plans, policy guides, and insurance advice from LIC Ambikapur (Ajay Satnami). Get expert insights on LIC term plans, child plans, pension schemes, health insurance, and financial planning.",
 
-  keywords: [
-    "LIC plans",
-    "LIC Ambikapur",
-    "LIC term insurance",
-    "LIC child plan",
-    "LIC pension plan",
-    "LIC health insurance",
-    "LIC premium calculator",
-    "LIC agent career",
-    "LIC policy guides",
-    "insurance tips",
-  ],
+},
 
-  alternates: {
-    canonical: "https://licambikapur.com",
-  },
+twitter: {
+card: "summary_large_image",
 
-  openGraph: {
-    title: "LIC Ambikapur – Expert LIC Plans & Insurance Guidance",
-    description:
-      "Get detailed guides and advice on LIC plans including term, child, pension, and health insurance. LIC Ambikapur helps you choose the best LIC plan for your needs.",
-    url: "https://licambikapur.com",
-    siteName: "LIC Ambikapur",
-    type: "website",
-    images: [
-      {
-        url: "https://licambikapur.com/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "LIC Ambikapur – LIC Plans & Policy Guidance",
-      },
-    ],
-  },
 
-  twitter: {
-    card: "summary_large_image",
-    title: "LIC Ambikapur – LIC Plans & Insurance Tips",
-    description:
-      "Explore LIC term plans, child plans, pension schemes, health insurance, and expert policy guidance from LIC Ambikapur.",
-    images: ["https://licambikapur.com/og-image.jpg"],
-    creator: "@licambikapur",
-  },
+title:
+  "LED Video Wall Rental Services in Thane | SIDDHI ENTERPRISES",
 
-  icons: {
-    icon: "/icons/favicon.ico",
-    shortcut: "/icons/favicon.ico",
-    apple: "/icons/apple-touch-icon.png",
-  },
+description:
+  "Indoor & Outdoor LED Walls for Weddings, Corporate Events, Exhibitions and Live Shows.",
 
-  manifest: "/manifest.json",
+images: [
+  "https://res.cloudinary.com/YOUR_CLOUD/image/upload/og-image.jpg",
+],
 
-  // verification: {
-  //   google: "YOUR_GOOGLE_VERIFICATION_CODE",
-  //   bing: "YOUR_BING_VERIFICATION_CODE",
-  // },
 
-  robots: {
-    index: true,
-    follow: true,
-  },
+},
+
+icons: {
+icon: "/favicon.ico",
+shortcut: "/favicon.ico",
+apple: "/apple-touch-icon.png",
+},
+
+manifest: "/manifest.json",
+
+robots: {
+index: true,
+follow: true,
+googleBot: {
+index: true,
+follow: true,
+"max-image-preview": "large",
+"max-snippet": -1,
+"max-video-preview": -1,
+},
+},
 };
+
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      name: "SIDDHI ENTERPRISES",
+      image: "https://yourdomain.com/logo.png",
+      telephone: "+91 2279614596",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress:
+          "206, 2nd Floor, Lodha Paradise, Fortuna CHS, Majiwada",
+        addressLocality: "Thane",
+        addressRegion: "Maharashtra",
+        postalCode: "400601",
+        addressCountry: "IN",
+      },
+      areaServed: [
+        "Thane",
+        "Mumbai",
+        "Navi Mumbai",
+        "Kalyan",
+        "Dombivli",
+      ],
+      priceRange: "₹₹",
+    }),
+  }}
+/>
         <Navbar />
         {children}
         <Footer />
