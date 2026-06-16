@@ -1,152 +1,152 @@
-"use client";
+import { Star } from "lucide-react";
 
-import useEmblaCarousel from "embla-carousel-react";
-import Autoplay from "embla-carousel-autoplay";
-import { useEffect, useCallback } from "react";
-import { MessageCircle } from "lucide-react"; // avatar icon
-
-export default function TestimonialsCarousel() {
-  
-  // ---------- TESTIMONIAL DATA ----------
-  const testimonials = [
-  {
-    name: "Pooja Verma",
-    role: "LIC Bima Sakhi (Ambikapur)",
-    message:
-      "Ajay Satnami sir ke guidance se mujhe LIC training, selling skills aur customer handling sab kuch seekhne ko mila. LIC Ambikapur me career start karne ke liye unka support sabse bada reason hai.",
-    keyword: "lic bima sakhi training"
-  },
-  {
-    name: "Neha Sharma",
-    role: "LIC Agent – Women Advisor",
-    message:
-      "LIC Ambikapur team ne mujhe flexible working aur stable income dono di. Development Officer Ajay Satnami ka mentorship mujhe har mahine better performance karne me help karta hai.",
-    keyword: "lic women agent opportunity"
-  },
-  {
-    name: "Riya Patel",
-    role: "Policyholder – Jeevan Anand",
-    message:
-      "Jeevan Anand policy ke benefits Ajay ji ne itne simple words me samjhaye ki decision lena easy ho gaya. LIC ka claim process bhi kaafi smooth raha.",
-    keyword: "jeevan anand lic review"
-  },
-  {
-    name: "Anjali Gupta",
-    role: "LIC Bima Sakhi Trainee",
-    message:
-      "Mujhe ghar se kaam karte hue income chahiye thi. Bima Sakhi program Ajay sir ke through join kiya aur ab monthly stable earning ho rahi hai.",
-    keyword: "lic bima sakhi income"
-  },
-  {
-    name: "Kiran Mishra",
-    role: "LIC Policyholder",
-    message:
-      "Child Future Plan ke baare me Ajay Satnami sir ne detailed financial planning batayi. LIC Ambikapur ka guidance truly trustworthy hai.",
-    keyword: "lic child plan review"
-  },
-
-  // ⭐ NEWLY GENERATED (Low Volume Keywords + Generic + Rankable)
-
-  {
-    name: "Sakshi Yadav",
-    role: "LIC Women Advisor (Ambikapur)",
-    message:
-      "Maine LIC me part-time shuru kiya tha, par Ajay sir ke regular follow-ups aur motivation ne mujhe full-time advisor banne ka confidence diya.",
-    keyword: "lic women advisor support"
-  },
-  {
-    name: "Ishita Tiwari",
-    role: "Policyholder – New Endowment Plan",
-    message:
-      "Ajay Satnami sir ne mere long-term savings aur protection goals ko samajhkar best LIC plan suggest kiya. LIC Ambikapur ka experience kaafi smooth tha.",
-    keyword: "lic endowment plan experience"
-  },
-  {
-    name: "Divya Singh",
-    role: "LIC Bima Sakhi",
-    message:
-      "Bima Sakhi program ne mujhe financial independence di. Ajay sir har step par training aur marketing support dete hain, jisse working easy hoti hai.",
-    keyword: "bima sakhi support program"
-  },
-  {
-    name: "Meena Rajput",
-    role: "LIC Policyholder – Term Plan",
-    message:
-      "LIC Term Plan ki affordability aur security samajhne me Ajay ji ne complete clarity di. LIC Ambikapur service mujhe bahut helpful lagi.",
-    keyword: "lic term plan feedback"
-  },
-  {
-    name: "Swati Chauhan",
-    role: "LIC Agent Trainee",
-    message:
-      "Ajay Satnami sir ka mentorship structure, daily guidance aur simple selling formula ne mujhe LIC me strong start diya. Training process easy aur practical tha.",
-    keyword: "lic agent trainee guidance"
-  }
+export default function Testimonials() {
+const testimonials = [
+{
+name: "Rahul Sharma",
+role: "Corporate Event Organizer",
+message:
+"SIDDHI ENTERPRISES provided an excellent LED video wall setup for our corporate conference in Thane. The display quality and technical support were outstanding.",
+},
+{
+name: "Priya Mehta",
+role: "Wedding Planner",
+message:
+"The LED screen setup completely transformed our wedding stage. Installation was on time and the visuals looked amazing throughout the event.",
+},
+{
+name: "Amit Verma",
+role: "Exhibition Organizer",
+message:
+"Professional team, high-quality LED panels and smooth execution. Highly recommended for exhibitions and trade shows.",
+},
+{
+name: "Neha Patel",
+role: "Event Coordinator",
+message:
+"Very responsive team and excellent service. The LED wall worked perfectly during our live event without any issues.",
+},
+{
+name: "Karan Shah",
+role: "Corporate Client",
+message:
+"Affordable pricing and premium quality displays. One of the best LED wall rental companies in Thane.",
+},
+{
+name: "Sneha Gupta",
+role: "Wedding Event Client",
+message:
+"Crystal-clear visuals, professional technicians and smooth setup. Our guests loved the LED display experience.",
+},
 ];
 
+return ( <section className="py-20 bg-white"> <div className="max-w-7xl mx-auto px-5 lg:px-8">
 
-  // ---------- EMBLA SETUP ----------
-  const [emblaRef, emblaApi] = useEmblaCarousel(
-    {
-      loop: true,
-      align: "start",
-      skipSnaps: false,
-    },
-    [Autoplay({ delay: 1500, stopOnInteraction: false })]
-  );
 
-  const onSelect = useCallback(() => {}, []);
+    {/* Header */}
 
-  useEffect(() => {
-    if (!emblaApi) return;
-    emblaApi.on("select", onSelect);
-  }, [emblaApi, onSelect]);
+    <div className="text-center max-w-3xl mx-auto">
 
-  return (
-    <section className="w-full py-16 bg-gradient-to-b from-[#F8F9FF] to-white">
-      <h2 className="text-center text-3xl font-bold text-[#003399] mb-10">
-        What People Say About <span className="text-[#E8B44C]">LIC Ambikapur</span>
+      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-50 text-purple-700 text-sm font-medium">
+        <Star size={16} fill="currentColor" />
+        Customer Reviews
+      </div>
+
+      <h2 className="mt-4 text-3xl md:text-5xl font-bold text-slate-900">
+        Trusted by Event Organizers
+        <span className="block bg-gradient-to-r from-[#7C3AED] to-[#EC4899] bg-clip-text text-transparent">
+          Across Thane & Mumbai
+        </span>
       </h2>
 
-      <div className="overflow-hidden px-4" ref={emblaRef}>
-        <div className="flex gap-4">
-          {testimonials.map((t, i) => (
-            <div
-              key={i}
-              className="
-                flex-shrink-0 
-                w-[90%] sm:w-[45%] lg:w-[22%]
-                bg-white
-                p-5 
-                rounded-xl 
-                shadow-md 
-                border border-gray-100 
-                hover:shadow-lg 
-                transition
-                bg-gradient-to-br from-white via-[#fff9e8] to-[#f0f4ff]
-              "
-            >
-              <div className="flex items-center gap-3 mb-3">
-                <div className="p-3 bg-[#003399]/10 rounded-full">
-                  <MessageCircle className="text-[#003399]" size={28} />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900">{t.name}</h3>
-                  <p className="text-sm text-gray-600">{t.role}</p>
-                </div>
-              </div>
+      <p className="mt-5 text-slate-600">
+        We take pride in delivering premium LED video wall solutions
+        for weddings, exhibitions, corporate events and live shows.
+      </p>
+    </div>
 
-              <p className="text-gray-700 text-sm leading-relaxed">
-                {t.message}
-              </p>
+    {/* Rating Cards */}
 
-              <p className="text-xs text-[#003399] mt-3 italic">
-                #{t.keyword}
-              </p>
-            </div>
-          ))}
+    {/* <div className="grid md:grid-cols-3 gap-5 mt-12">
+
+      <div className="rounded-2xl border p-6 text-center bg-white shadow-sm">
+        <div className="text-4xl font-bold text-[#7C3AED]">
+          4.5★
         </div>
+        <p className="text-slate-500 mt-2">
+          Google Rating
+        </p>
       </div>
-    </section>
-  );
+
+      <div className="rounded-2xl border p-6 text-center bg-white shadow-sm">
+        <div className="text-4xl font-bold text-[#7C3AED]">
+          100+
+        </div>
+        <p className="text-slate-500 mt-2">
+          Events Completed
+        </p>
+      </div>
+
+      <div className="rounded-2xl border p-6 text-center bg-white shadow-sm">
+        <div className="text-4xl font-bold text-[#7C3AED]">
+          24/7
+        </div>
+        <p className="text-slate-500 mt-2">
+          Technical Support
+        </p>
+      </div>
+
+    </div> */}
+
+    {/* Reviews */}
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-14">
+      {testimonials.map((item, index) => (
+        <div
+          key={index}
+          className="rounded-3xl border bg-white p-6 shadow-sm hover:shadow-lg transition"
+        >
+          <div className="flex gap-1 mb-4">
+            {[...Array(5)].map((_, i) => (
+              <Star
+                key={i}
+                size={16}
+                fill="currentColor"
+                className="text-yellow-500"
+              />
+            ))}
+          </div>
+
+          <p className="text-slate-600 leading-relaxed">
+            "{item.message}"
+          </p>
+
+          <div className="mt-5">
+            <h3 className="font-semibold text-slate-900">
+              {item.name}
+            </h3>
+
+            <p className="text-sm text-slate-500">
+              {item.role}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    {/* CTA */}
+
+    {/* <div className="mt-14 text-center">
+      <a
+        href="tel:+912279614596"
+        className="inline-flex items-center justify-center px-7 py-4 rounded-xl bg-[#7C3AED] text-white font-semibold hover:opacity-90"
+      >
+        Get Your Event Quote Today
+      </a>
+    </div> */}
+  </div>
+</section>
+
+
+);
 }

@@ -3,199 +3,229 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Phone, MessageCircle, UserCheck } from "lucide-react";
-import Image from "next/image";
+import {
+  Menu,
+  X,
+  Phone,
+  MessageCircle,
+  FileText,
+} from "lucide-react";
 
-const PHONE = "+917000841676";
-const WA_LINK = `https://wa.me/917000841676`;
+const PHONE = "+912279614596";
+const WA_LINK = "https://wa.me/912279614596";
 
 const Navbar = () => {
+  const pathname = usePathname();
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const pathname = usePathname();
 
   const isActive = (path) => pathname === path;
 
   const menuItems = [
     { name: "Home", slug: "/" },
-    { name: "LIC Plans", slug: "/tag/maturity-benefits" },
-    { name: "LIC Agents", slug: "/agents" },
-    { name: "Blogs", slug: "/blog" },
+    // { name: "About Us", slug: "/about-us" },
+    // { name: "Services", slug: "/services" },
+    // { name: "Gallery", slug: "/gallery" },
+    { name: "Blog", slug: "/blog" },
+    // { name: "Contact", slug: "/contact-us" },
   ];
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
+    });
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/95 backdrop-blur-sm shadow-md py-3" : "bg-gradient-to-br from-[#003399]/10 via-[#FED700]/20 to-white py-[1.2rem]"
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
-        {/* Brand */}
-        <Link href="/" className="flex items-center gap-3">
-          <div
-            aria-hidden
-            className="w-10 h-10 rounded-md flex items-center justify-center shadow-sm"
-            // style={{ background: "#E8B44C" }}
-          >
-            <span className="text-sm font-bold text-white">
-                     <Image
-                        src="https://res.cloudinary.com/dnq42wt3a/image/upload/v1766468924/posts/vjsdh5kjuuwxqadevvlo.png"
-                        alt="LIC Development LOGO"
-                        width={100}
-                        height={100}
-                        priority
-                        className=""
-                      /></span>
-          </div>
-          <div className="leading-tight">
-            <div className="text-lg font-semibold text-[#1A1A1A]">Lic Ambikapur</div>
-            <div className="text-xs text-[#6F7787]">Ajay Satnami - Development Officer</div>
-          </div>
-        </Link>
+    <>
+      {/* Top Bar */}
+      <div className="hidden lg:block bg-[#0F172A] text-white text-sm">
+        <div className="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
+          <p>
+            Premium LED Video Wall Rental Services in Thane & Mumbai
+          </p>
 
-        {/* Desktop Menu */}
-        <nav className="hidden md:flex items-center space-x-4 text-sm font-medium">
-          {menuItems.map((item) => (
-            <Link key={item.name} href={item.slug}>
-              <span
-                className={`px-3 py-1 rounded transition-colors duration-150 ${
-                  isActive(item.slug)
-                    ? "text-[#1A4D8F] border-b-2 border-[#E8B44C] pb-1"
-                    : "text-[#1A1A1A] hover:text-[#1A4D8F]"
-                }`}
-              >
-                {item.name}
-              </span>
-            </Link>
-          ))}
-
-          {/* CTA Buttons */}
           <a
             href={`tel:${PHONE}`}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-gradient-to-r from-[#1A4D8F] to-[#163f78] text-white font-semibold shadow hover:scale-105 transition-transform duration-200"
+            className="font-semibold hover:text-yellow-400 transition"
           >
-            <Phone className="w-4 h-4" /> Call
+            Call Now: +91 2279614596
           </a>
-
-          <a
-            href='https://docs.google.com/forms/d/e/1FAIpQLSex_Ai21O9OJ7C_08e4J4nYp8Ka30fAfBKzUuz5NuHZU2mnlA/viewform?usp=dialog' target="_blank"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-gradient-to-r from-[#6F78A0] to-[#596190] text-white font-semibold shadow hover:scale-105 transition-transform duration-200"
-          >
-            <UserCheck className="w-4 h-4" /> Become Agent
-          </a>
-        </nav>
-
-        {/* Mobile Toggle */}
-        <div className="md:hidden flex items-center gap-3">
-          <a href={`tel:${PHONE}`} className="p-2 rounded-md bg-[#1A4D8F] text-white">
-            <Phone className="w-5 h-5" />
-          </a>
-
-          <Menu
-            className="w-7 h-7 cursor-pointer text-[#1A1A1A]"
-            onClick={() => setIsMenuOpen(true)}
-            aria-label="Open menu"
-          />
         </div>
       </div>
 
-      {/* Mobile Drawer */}
-      {isMenuOpen && (
-        <div className="fixed inset-0 z-[60] h-screen bg-white flex flex-col px-6 pt-6 animate-slide-in-right">
-          <div className="flex justify-between items-center mb-4">
-            <div className="flex items-center gap-3">
-              <div
-                className="w-9 h-9 rounded-md flex items-center justify-center"
-                style={{ background: "#E8B44C" }}
-              >
-                <span className="text-xs font-semibold text-white">AS</span>
-              </div>
-              <div>
-                <div className="text-base font-semibold text-[#1A1A1A]">Lic Ambikapur</div>
-                <div className="text-xs text-[#6F7787]">Ajay Satnami</div>
-              </div>
+      <header
+        className={`fixed top-0 lg:top-[36px] w-full z-50 transition-all duration-300 ${
+          scrolled
+            ? "bg-white/95 backdrop-blur-md shadow-md py-3"
+            : "bg-gradient-to-r from-purple-50 via-pink-50 to-yellow-50 py-4"
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-3">
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-[#7C3AED] to-[#EC4899] flex items-center justify-center text-white font-bold text-lg shadow-lg">
+              SE
             </div>
-            <X className="w-6 h-6 cursor-pointer text-gray-600" onClick={() => setIsMenuOpen(false)} />
-          </div>
 
-          <hr className="border-gray-200 mb-4" />
+            <div>
+              <h2 className="text-lg font-bold text-slate-900">
+                SIDDHI ENTERPRISES
+              </h2>
 
-          <nav className="flex flex-col w-full space-y-2 font-medium text-base flex-1 overflow-y-auto pb-32">
+              <p className="text-xs text-slate-500">
+                LED Video Wall & Event Display Solutions
+              </p>
+            </div>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center gap-5">
             {menuItems.map((item) => (
-              <Link key={item.name} href={item.slug} onClick={() => setIsMenuOpen(false)}>
+              <Link key={item.name} href={item.slug}>
                 <span
-                  className={`block px-4 py-3 rounded-md transition-all ${
+                  className={`font-medium transition ${
                     isActive(item.slug)
-                      ? "bg-[#F6F8FC] text-[#1A4D8F] font-semibold"
-                      : "text-[#1A1A1A] hover:bg-[#F6F8FC] hover:text-[#1A4D8F]"
+                      ? "text-[#7C3AED] border-b-2 border-[#EC4899] pb-1"
+                      : "text-slate-700 hover:text-[#7C3AED]"
                   }`}
                 >
                   {item.name}
                 </span>
               </Link>
             ))}
+
+            <a
+              href={`tel:${PHONE}`}
+              className="inline-flex items-center gap-2 px-5 py-2 rounded-lg bg-gradient-to-r from-[#7C3AED] to-[#6D28D9] text-white font-semibold shadow hover:scale-105 transition"
+            >
+              <Phone className="w-4 h-4" />
+              Call Now
+            </a>
+
+            <Link
+              href="/contact-us"
+              className="inline-flex items-center gap-2 px-5 py-2 rounded-lg bg-gradient-to-r from-[#EC4899] to-[#DB2777] text-white font-semibold shadow hover:scale-105 transition"
+            >
+              <FileText className="w-4 h-4" />
+              Get Quote
+            </Link>
           </nav>
 
-          {/* Social icons */}
-          <div className="flex justify-center space-x-6 mt-2 mb-6">
-            <a aria-label="WhatsApp" href={WA_LINK} target="_blank" className="text-[#1A4D8F]">
-              <MessageCircle className="w-6 h-6" />
+          {/* Mobile */}
+          <div className="md:hidden flex items-center gap-3">
+            <a
+              href={`tel:${PHONE}`}
+              className="p-2 rounded-lg bg-[#7C3AED] text-white"
+            >
+              <Phone className="w-5 h-5" />
             </a>
-          </div>
 
-          {/* Bottom Fixed Buttons */}
-          <div className="fixed left-0 right-0 bottom-0 px-6 pb-6 bg-white/95 border-t border-gray-200">
-            <div className="flex gap-3">
-              <a
-                href={`tel:${PHONE}`}
-                className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-[#1A4D8F] text-white font-semibold shadow"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                <Phone className="w-4 h-4" /> Call
-              </a>
-
-              <a
-                href={WA_LINK}
-                target="_blank"
-                rel="noreferrer"
-                className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-[#E8B44C] text-[#1A1A1A] font-semibold shadow"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                <MessageCircle className="w-4 h-4" /> WhatsApp
-              </a>
-
-              <a
-                href={`tel:${PHONE}`}
-                className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-[#6F78A0] text-white font-semibold shadow"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                <UserCheck className="w-4 h-4" /> Become Agent
-              </a>
-            </div>
+            <Menu
+              className="w-7 h-7 text-slate-900 cursor-pointer"
+              onClick={() => setIsMenuOpen(true)}
+            />
           </div>
         </div>
-      )}
 
-      <style jsx>{`
-        @keyframes slide-in-right {
-          from {
-            transform: translateX(100%);
+        {/* Mobile Drawer */}
+        {isMenuOpen && (
+          <div className="fixed inset-0 bg-white z-[999] animate-slide-in-right">
+            <div className="p-6 h-full flex flex-col">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-[#7C3AED] to-[#EC4899] flex items-center justify-center text-white font-bold">
+                    SE
+                  </div>
+
+                  <div>
+                    <h2 className="font-bold text-slate-900">
+                      SIDDHI ENTERPRISES
+                    </h2>
+
+                    <p className="text-xs text-slate-500">
+                      LED Display Solutions
+                    </p>
+                  </div>
+                </div>
+
+                <X
+                  className="cursor-pointer"
+                  onClick={() => setIsMenuOpen(false)}
+                />
+              </div>
+
+              <hr className="my-6" />
+
+              <div className="flex flex-col gap-3 flex-1">
+                {menuItems.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.slug}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`px-4 py-3 rounded-lg ${
+                      isActive(item.slug)
+                        ? "bg-purple-100 text-[#7C3AED] font-semibold"
+                        : "hover:bg-slate-100"
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+
+              <div className="border-t pt-5 flex flex-col gap-3">
+                <a
+                  href={`tel:${PHONE}`}
+                  className="flex items-center justify-center gap-2 bg-[#7C3AED] text-white py-3 rounded-lg font-semibold"
+                >
+                  <Phone className="w-4 h-4" />
+                  Call Now
+                </a>
+
+                <a
+                  href={WA_LINK}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center justify-center gap-2 bg-green-500 text-white py-3 rounded-lg font-semibold"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  WhatsApp
+                </a>
+
+                <Link
+                  href="/contact-us"
+                  className="flex items-center justify-center gap-2 bg-[#EC4899] text-white py-3 rounded-lg font-semibold"
+                >
+                  <FileText className="w-4 h-4" />
+                  Get Quote
+                </Link>
+              </div>
+            </div>
+          </div>
+        )}
+
+        <style jsx>{`
+          @keyframes slide-in-right {
+            from {
+              transform: translateX(100%);
+            }
+            to {
+              transform: translateX(0%);
+            }
           }
-          to {
-            transform: translateX(0);
+
+          .animate-slide-in-right {
+            animation: slide-in-right 0.25s ease-out;
           }
-        }
-        .animate-slide-in-right {
-          animation: slide-in-right 0.25s ease-out;
-        }
-      `}</style>
-    </header>
+        `}</style>
+      </header>
+    </>
   );
 };
 

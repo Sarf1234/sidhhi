@@ -1,217 +1,257 @@
 export const categoriesSeed = [
-  { 
-    name: "LIC Policy Guides",
-    slug: "lic-policy-guides",
-    title: "LIC Policy Guides – Benefits, Eligibility & Complete Plan Details",
-    description: "Deep-dive guides on all major LIC policies with premium details, maturity benefits, eligibility, riders, and policy comparisons.",
-    keywords: ["lic policy guide", "lic policy details", "best lic policy", "lic plan benefits", "lic policy list"]
-  },
-  { 
-    name: "LIC Term Insurance",
-    slug: "lic-term-insurance",
-    title: "LIC Term Insurance – High Life Cover, Low Premium Plans",
-    description: "Complete insights on LIC term insurance including premium chart, claim ratio, features, and comparison with other plans.",
-    keywords: ["lic term insurance", "best lic term plan", "lic jeevan amar", "term plan lic", "low premium lic term"]
-  },
-  { 
-    name: "Savings & Investment Plans",
-    slug: "savings-investment-plans",
-    title: "Savings & Investment Plans – Guaranteed Returns with LIC Policies",
-    description: "In-depth articles on LIC saving and investment plans with guaranteed returns, long-term benefits, and maturity calculations.",
-    keywords: ["lic saving plan", "lic investment plan", "guaranteed return lic", "best lic saving plan"]
-  },
-  { 
-    name: "Child Education Plans",
-    slug: "child-education-plans",
-    title: "Child Education Plans – Secure Your Child’s Future with LIC",
-    description: "Guides on LIC child plans for education, marriage, and long-term financial security with premium waiver benefits.",
-    keywords: ["lic child plan", "child education plan lic", "best child policy lic", "lic child future plan"]
-  },
-  { 
-    name: "Retirement & Pension Plans",
-    slug: "retirement-pension-plans",
-    title: "Retirement & Pension Plans – LIC Annuity & Lifetime Income",
-    description: "LIC pension plans with annuity options, retirement income solutions, and senior citizen benefits explained in detail.",
-    keywords: ["lic pension plan", "lic retirement plan", "annuity plan lic", "senior citizen lic plan"]
-  },
-  { 
-    name: "LIC Health Insurance",
-    slug: "lic-health-insurance",
-    title: "LIC Health Insurance – Hospital Cash, Critical Illness & Benefits",
-    description: "LIC health insurance guides covering hospital cash benefit, medical cover, and family health protection plans.",
-    keywords: ["lic health insurance", "lic health plan", "lic medical policy", "health cover lic"]
-  },
-  { 
-    name: "LIC Agent & Career",
-    slug: "lic-agent-career",
-    title: "LIC Agent & Career – Joining Process, Commission & Growth",
-    description: "Articles and guides on becoming an LIC agent, income potential, recruitment process, and career opportunities.",
-    keywords: ["lic agent join", "become lic agent", "lic agent commission", "lic agent career"]
-  },
-  { 
-    name: "Insurance & Finance Knowledge",
-    slug: "insurance-finance-knowledge",
-    title: "Insurance & Finance Knowledge – Basics, Tax Benefits & Smart Tips",
-    description: "Educational articles about insurance basics, premium calculation, tax benefits, financial planning and policy awareness.",
-    keywords: ["insurance knowledge", "insurance basics", "lic tax benefits", "insurance tips", "premium calculator info"]
-  }
+{
+name: "LED Video Wall Rental",
+slug: "led-video-wall-rental",
+title: "LED Video Wall Rental Services in Thane & Mumbai",
+description:
+"Expert guides, tips and solutions related to LED video wall rental services for weddings, exhibitions, corporate events and live shows.",
+keywords: [
+"led video wall rental",
+"led wall rental thane",
+"led screen rental mumbai",
+"event led display",
+"video wall rental"
+]
+},
+
+{
+name: "Wedding LED Screens",
+slug: "wedding-led-screens",
+title: "Wedding LED Screen Rental & Display Solutions",
+description:
+"Everything about wedding LED walls, stage backdrops, reception displays and LED screen setups for weddings.",
+keywords: [
+"wedding led screen",
+"wedding led wall",
+"led screen rental wedding",
+"reception led display",
+"wedding stage screen"
+]
+},
+
+{
+name: "Corporate Event Displays",
+slug: "corporate-event-displays",
+title: "Corporate Event LED Display Solutions",
+description:
+"Professional LED display solutions for conferences, seminars, product launches and corporate events.",
+keywords: [
+"corporate led display",
+"conference led screen",
+"event display solutions",
+"business event led wall"
+]
+},
+
+{
+name: "Exhibition & Trade Shows",
+slug: "exhibition-trade-shows",
+title: "LED Displays for Exhibitions & Trade Shows",
+description:
+"Guides and solutions for exhibition LED walls, trade show displays and event branding screens.",
+keywords: [
+"exhibition led wall",
+"trade show display",
+"event branding screen",
+"expo led display"
+]
+},
+
+{
+name: "Indoor LED Walls",
+slug: "indoor-led-walls",
+title: "Indoor LED Wall Rental Services",
+description:
+"Learn about indoor LED wall solutions, screen sizes, resolutions and installation for events.",
+keywords: [
+"indoor led wall",
+"indoor led display",
+"indoor video wall",
+"event led screen"
+]
+},
+
+{
+name: "Outdoor LED Walls",
+slug: "outdoor-led-walls",
+title: "Outdoor LED Wall Rental & Event Displays",
+description:
+"Outdoor LED wall guides including weatherproof displays, concerts and public events.",
+keywords: [
+"outdoor led wall",
+"outdoor led display",
+"concert led screen",
+"event led wall rental"
+]
+},
+
+{
+name: "Event Technology",
+slug: "event-technology",
+title: "Latest Event Technology & LED Trends",
+description:
+"Explore the latest event technology trends, digital displays, live streaming and visual solutions.",
+keywords: [
+"event technology",
+"event trends",
+"digital event solutions",
+"led display technology"
+]
+},
+
+{
+name: "Event Planning Guides",
+slug: "event-planning-guides",
+title: "Event Planning & Display Setup Guides",
+description:
+"Practical event planning tips, display setup advice and event execution strategies.",
+keywords: [
+"event planning",
+"event setup guide",
+"event display planning",
+"corporate event planning"
+]
+}
 ];
 
-
 export const tagsSeed = [
+{
+name: "LED Video Wall",
+slug: "led-video-wall",
+title: "LED Video Wall Rental & Setup Guide",
+description:
+"Everything about LED video walls including installation, rental and event usage.",
+keywords: [
+"led video wall",
+"video wall rental",
+"led display wall"
+]
+},
 
-  {
-    name: "1.Term Plan",
-    slug: "term-plan",
-    title: "Term Plan – Best LIC Term Insurance & Life Cover Guide",
-    description:
-      "Complete guide on LIC term plans including coverage, premium, eligibility, claim process and comparison.",
-    keywords: [
-      "lic term plan",
-      "best term plan lic",
-      "lic term insurance",
-      "term plan benefits",
-      "life insurance term plan"
-    ]
-  },
+{
+name: "LED Screen Rental",
+slug: "led-screen-rental",
+title: "LED Screen Rental Services",
+description:
+"Guides on LED screen rental services for weddings, exhibitions and corporate events.",
+keywords: [
+"led screen rental",
+"rent led screen",
+"event screen rental"
+]
+},
 
-  {
-    name: "2.ULIP Plans",
-    slug: "ulip-plans",
-    title: "ULIP Plans – LIC ULIP Investment & Insurance Plans Explained",
-    description:
-      "Detailed guide on LIC ULIP plans covering returns, charges, risk, benefits and comparison with mutual funds.",
-    keywords: [
-      "lic ulip plan",
-      "ulip plans lic",
-      "best ulip plan lic",
-      "ulip investment plan",
-      "ulip vs mutual fund"
-    ]
-  },
+{
+name: "Wedding Events",
+slug: "wedding-events",
+title: "Wedding Event Display Solutions",
+description:
+"LED wall ideas and display solutions for modern weddings.",
+keywords: [
+"wedding led wall",
+"wedding display",
+"wedding screen rental"
+]
+},
 
-  {
-    name: "3.Child Secure Plan",
-    slug: "child-secure-plan",
-    title: "Child Secure Plan – LIC Child Plans for Education & Future",
-    description:
-      "LIC child secure plans designed for education, marriage and long-term financial safety of your child.",
-    keywords: [
-      "lic child plan",
-      "child secure plan lic",
-      "child future plan",
-      "lic education plan"
-    ]
-  },
+{
+name: "Corporate Events",
+slug: "corporate-events",
+title: "Corporate Event Display Solutions",
+description:
+"Professional LED display systems for corporate events and conferences.",
+keywords: [
+"corporate events",
+"conference led display",
+"business event screen"
+]
+},
 
-  {
-    name: "4.Retirement Plan",
-    slug: "retirement-plan",
-    title: "Retirement Plan – LIC Pension & Monthly Income Plans",
-    description:
-      "Detailed guides on LIC retirement and pension plans offering steady income after retirement.",
-    keywords: [
-      "lic retirement plan",
-      "lic pension plan",
-      "retirement income plan",
-      "monthly pension lic"
-    ]
-  },
+{
+name: "Product Launch",
+slug: "product-launch",
+title: "Product Launch Event Displays",
+description:
+"LED display ideas and visual solutions for product launches.",
+keywords: [
+"product launch display",
+"launch event screen",
+"brand launch led wall"
+]
+},
 
-  {
-    name: "5.LIC Best Policy",
-    slug: "lic-best-policy",
-    title: "LIC Best Policy – Compare & Choose the Right LIC Policy",
-    description:
-      "Comparison of best LIC policies based on age, income, family needs, tax benefits and goals.",
-    keywords: [
-      "lic best policy",
-      "best lic policy",
-      "which lic policy is best",
-      "top lic plans"
-    ]
-  },
+{
+name: "Exhibition Display",
+slug: "exhibition-display",
+title: "Exhibition LED Display Solutions",
+description:
+"Trade show and exhibition LED display setup guides.",
+keywords: [
+"exhibition display",
+"trade show led wall",
+"expo display screen"
+]
+},
 
-  {
-    name: "6.LIC Agent",
-    slug: "lic-agent",
-    title: "LIC Agent – Registration, Commission & Income Guide",
-    description:
-      "Complete information about becoming an LIC agent, commission structure, income potential and training.",
-    keywords: [
-      "lic agent",
-      "lic agent registration",
-      "lic agent commission",
-      "lic agent income"
-    ]
-  },
+{
+name: "Live Events",
+slug: "live-events",
+title: "Live Event LED Displays",
+description:
+"LED screen solutions for concerts, live shows and public events.",
+keywords: [
+"live event display",
+"concert led screen",
+"event video wall"
+]
+},
 
-  {
-    name: "7.Life Insurance Benefit",
-    slug: "life-insurance-benefit",
-    title: "Life Insurance Benefits – Why LIC Life Insurance Matters",
-    description:
-      "Understand life insurance benefits including protection, savings, tax benefits and family security.",
-    keywords: [
-      "life insurance benefits",
-      "lic life insurance benefit",
-      "benefits of life insurance",
-      "why life insurance is important"
-    ]
-  },
+{
+name: "Indoor LED",
+slug: "indoor-led",
+title: "Indoor LED Wall Solutions",
+description:
+"Indoor LED display technology and event applications.",
+keywords: [
+"indoor led wall",
+"indoor led display",
+"indoor video wall"
+]
+},
 
-  {
-    name: "8.Tax Benefit",
-    slug: "tax-benefit",
-    title: "Tax Benefit – Save Tax Using LIC Policies (80C & 10(10D))",
-    description:
-      "Learn how LIC policies help you save tax under Section 80C and 10(10D) with practical examples.",
-    keywords: [
-      "lic tax benefit",
-      "tax saving lic",
-      "80c lic policy",
-      "10(10d) lic"
-    ]
-  },
+{
+name: "Outdoor LED",
+slug: "outdoor-led",
+title: "Outdoor LED Display Solutions",
+description:
+"Outdoor LED walls for large-scale events and public gatherings.",
+keywords: [
+"outdoor led wall",
+"outdoor display",
+"event led screen"
+]
+},
 
-  {
-    name: "9.LIC Policy Calculator",
-    slug: "lic-policy-calculator",
-    title: "LIC Policy Calculator – Premium, Maturity & Returns",
-    description:
-      "Use LIC policy calculators to estimate premium, maturity value, bonus and returns easily.",
-    keywords: [
-      "lic policy calculator",
-      "lic premium calculator",
-      "lic maturity calculator",
-      "lic bonus calculator"
-    ]
-  },
-
-  {
-    name: "Why Choose LIC",
-    slug: "why-choose-lic",
-    title: "Why Choose LIC – Benefits, Trust & Claim Settlement Ratio",
-    description:
-      "Reasons to choose LIC including trust factor, claim settlement ratio, government backing and stability.",
-    keywords: [
-      "why choose lic",
-      "lic benefits",
-      "lic claim settlement ratio",
-      "is lic good"
-    ]
-  }
-
+{
+name: "Event Management",
+slug: "event-management",
+title: "Event Management & Display Planning",
+description:
+"Event planning, visual display solutions and execution strategies.",
+keywords: [
+"event management",
+"event planning",
+"event setup"
+]
+}
 ];
 
 
 
 export const imagesLink = [
-  'https://res.cloudinary.com/dnq42wt3a/image/upload/v1765365654/posts/rsrmkfkdgwpifb2jpatr.png',
-  'https://res.cloudinary.com/dnq42wt3a/image/upload/v1765365529/posts/pzzfewyorxxrfbcinqtl.jpg',
-  'https://res.cloudinary.com/dnq42wt3a/image/upload/v1765365570/posts/lig5px6aw2ipqbgvziog.jpg',
-  'https://res.cloudinary.com/dnq42wt3a/image/upload/v1765365598/posts/fpy5zebbfxs9x6kfylih.png',
-  'https://res.cloudinary.com/dnq42wt3a/image/upload/v1765365625/posts/cjxnkirmigttxmmmqwkd.jpg',
+  'https://res.cloudinary.com/dnq42wt3a/image/upload/v1781585364/posts/zsoaueillwjmwxrmvoer.jpg',
+  'https://res.cloudinary.com/dnq42wt3a/image/upload/v1781585398/posts/ajzgobvd6rg0cfyrpsv2.jpg',
+  'https://res.cloudinary.com/dnq42wt3a/image/upload/v1781585443/posts/au5bzdckhaueors4vvps.jpg',
 ]
 
 

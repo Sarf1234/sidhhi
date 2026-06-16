@@ -1,118 +1,168 @@
-import React from "react";
-import Link from "next/link";
-import { Facebook, Twitter, Instagram, Linkedin, MessageCircle, PhoneCall } from "lucide-react";
-
-// LIC-specific tags & categories
-const categoriesSeed = [
-  { name: "LIC Policy Guides", slug: "lic-policy-guides" },
-  { name: "LIC Term Insurance", slug: "lic-term-insurance" },
-  { name: "Savings & Investment Plans", slug: "savings-investment-plans" },
-  { name: "Child Education Plans", slug: "child-education-plans" },
-  { name: "Retirement & Pension Plans", slug: "retirement-pension-plans" },
-  { name: "LIC Health Insurance", slug: "lic-health-insurance" },
-  { name: "LIC Agent & Career", slug: "lic-agent-career" },
-  { name: "Insurance & Finance Knowledge", slug: "insurance-finance-knowledge" },
-];
-
-const tagsSeed = [
-  { name: "LIC Plans", slug: "lic-plans" },
-  { name: "Premium Calculator", slug: "premium-calculator" },
-  { name: "LIC Agent", slug: "lic-agent" },
-  { name: "Tax Benefits", slug: "tax-benefits" },
-  { name: "Maturity Benefits", slug: "maturity-benefits" },
-  { name: "Term Plan", slug: "term-plan" },
-  { name: "Child Policy", slug: "child-policy" },
-  { name: "Pension Plan", slug: "pension-plan" },
-  { name: "Health Plan", slug: "health-plan" },
-  { name: "Insurance Tips", slug: "insurance-tips" },
-];
+import {
+PhoneCall,
+MapPin,
+MessageCircle,
+Mail,
+} from "lucide-react";
 
 export default function Footer() {
-  return (
-    <footer className="bg-gradient-to-tr from-blue-50 via-white to-yellow-50 text-blue-900 border-t border-blue-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12">
-        {/* Top Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {/* Logo & About */}
-          <div className="text-center md:text-left">
-            <h3 className="text-3xl font-bold text-blue-700 mb-4">LIC Ambikapur</h3>
-            <p className="text-base text-blue-900 leading-relaxed">
-              Ajay Satnami – Development Officer in LIC, Ambikapur. 
-              Helping you secure your future and achieve your dreams with LIC policies.
+return ( <footer className="bg-slate-950 text-white"> <div className="max-w-7xl mx-auto px-5 lg:px-8 py-16">
+
+
+    <div className="grid lg:grid-cols-3 items-center gap-12">
+
+      {/* Company */}
+
+      <div className="text-center lg:text-left">
+
+        <div className="flex items-center justify-center lg:justify-start gap-3 mb-5">
+          <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-[#7C3AED] to-[#EC4899] flex items-center justify-center font-bold text-xl">
+            SE
+          </div>
+
+          <div>
+            <h3 className="font-bold text-2xl">
+              SIDDHI ENTERPRISES
+            </h3>
+
+            <p className="text-sm text-slate-400">
+              LED Video Wall Rental Services
             </p>
           </div>
-
-          {/* Categories & Tags */}
-          <div className="text-center">
-            <h4 className="text-xl font-semibold text-blue-700 mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-               <li>
-                  <Link
-                    href="https://enach.licindia.in/nachproposalclient/" target="_blank"
-                    className="text-blue-900 hover:text-blue-600 transition-colors duration-200"
-                  > E-NACH - To Activate One Mly Premium</Link>
-                </li>
-                <li>
-                  <Link
-                    href="https://enach.licindia.in/LICNACHClient/" target="_blank"
-                    className="text-blue-900 hover:text-blue-600 transition-colors duration-200"
-                  > E-NACH Registration</Link>
-                </li>
-                <li>
-                  <Link
-                    href="https://esales.licindia.in/pages/login-page" target="_blank"
-                    className="text-blue-900 hover:text-blue-600 transition-colors duration-200"
-                  >Ananda App (Web Version)</Link>
-                </li>
-                <li>
-                  <Link
-                    href="https://dexitexams.com/OnlinePayment/paymentRequest.jsp" target="_blank"
-                    className="text-blue-900 hover:text-blue-600 transition-colors duration-200"
-                  >URN Payment</Link>
-                </li>
-                <li>
-                  <Link
-                    href="https://www.iiiexams.org/Candidates/Hallticket" target="_blank"
-                    className="text-blue-900 hover:text-blue-600 transition-colors duration-200"
-                  >Agent Hall ticket</Link>
-                </li>
-
-            </ul>
-          </div>
-
-          {/* Contact & Social */}
-          <div className="text-center md:text-right">
-            <h4 className="text-xl font-semibold text-blue-700 mb-4">Contact</h4>
-            <div className="flex justify-center md:justify-end gap-4 mb-4">
-              <Link href="https://www.facebook.com/share/1cAuQRoZ8N/" target="_blank" className="text-blue-900 hover:text-blue-600 transition-colors duration-200">
-                <Facebook className="w-6 h-6" />
-              </Link>
-              {/* <Link href="https://twitter.com" target="_blank" className="text-blue-900 hover:text-blue-600 transition-colors duration-200">
-                <Twitter className="w-6 h-6" />
-              </Link> */}
-              <Link href="https://www.instagram.com/lic_a2z?igsh=c2pnY2IycTRleGUx" target="_blank" className="text-blue-900 hover:text-blue-600 transition-colors duration-200">
-                <Instagram className="w-6 h-6" />
-              </Link>
-              {/* <Link href="https://linkedin.com" target="_blank" className="text-blue-900 hover:text-blue-600 transition-colors duration-200">
-                <Linkedin className="w-6 h-6" />
-              </Link> */}
-            </div>
-            <div className="flex flex-col md:items-end items-center text-blue-900 space-y-1">
-              <Link href="tel:7000841676" className="flex items-center gap-2 hover:text-blue-600 transition-colors duration-200">
-                <PhoneCall className="w-5 h-5" /> 7000 841 676
-              </Link>
-              <Link href="https://wa.me/917000841676" target="_blank" className="flex items-center gap-2 hover:text-green-600 transition-colors duration-200">
-                <MessageCircle className="w-5 h-5" /> Chat on WhatsApp
-              </Link>
-            </div>
-          </div>
         </div>
 
-        {/* Bottom Note */}
-        <div className="mt-12 pt-6 border-t border-blue-200 text-center text-sm text-blue-900">
-          © 2025 <span className="font-medium text-blue-700">LIC Ambikapur</span>. Ajay Satnami – Development Officer. All rights reserved.
-        </div>
+        <p className="text-slate-400 leading-relaxed max-w-md mx-auto lg:mx-0">
+          SIDDHI ENTERPRISES provides premium LED video wall rental
+          solutions for weddings, exhibitions, corporate events,
+          concerts, product launches and live shows across
+          Thane, Mumbai and Navi Mumbai.
+        </p>
+
       </div>
-    </footer>
-  );
+
+      {/* Services */}
+
+      <div className="text-center">
+
+        <h4 className="font-semibold text-xl mb-5">
+          Our Services
+        </h4>
+
+        <div className="space-y-3 text-slate-400">
+
+          <p>LED Video Wall Rental</p>
+
+          <p>Indoor LED Walls</p>
+
+          <p>Outdoor LED Walls</p>
+
+          <p>Wedding LED Screens</p>
+
+          <p>Corporate Event Displays</p>
+
+          <p>Exhibition LED Displays</p>
+
+        </div>
+
+      </div>
+
+      {/* Contact */}
+
+      <div className="text-center lg:text-left">
+
+        <h4 className="font-semibold text-xl mb-5">
+          Contact Information
+        </h4>
+
+        <div className="space-y-5">
+
+          <a
+            href="tel:+912279614596"
+            className="flex items-center justify-center lg:justify-start gap-3 text-slate-400 hover:text-white transition"
+          >
+            <PhoneCall size={18} />
+            <span>+91 2279614596</span>
+          </a>
+
+          <a
+            href="https://wa.me/912279614596"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center lg:justify-start gap-3 text-slate-400 hover:text-white transition"
+          >
+            <MessageCircle size={18} />
+            <span>WhatsApp Support</span>
+          </a>
+
+          <div className="flex items-start justify-center lg:justify-start gap-3 text-slate-400">
+            <MapPin
+              size={18}
+              className="mt-1 shrink-0"
+            />
+
+            <span>
+              Mahendra V Badekar
+              <br />
+              206, 2nd Floor
+              <br />
+              Lodha Paradise
+              <br />
+              Fortuna CHS
+              <br />
+              Majiwada, Thane
+              <br />
+              Maharashtra - 400601
+            </span>
+          </div>
+
+          <div className="flex items-center justify-center lg:justify-start gap-3 text-slate-400">
+            <Mail size={18} />
+            <span>
+              info@siddhienterprises.com
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    {/* Service Area */}
+
+    <div className="mt-14 pt-10 border-t border-slate-800 text-center">
+
+      <h4 className="font-semibold text-lg mb-4">
+        Service Areas
+      </h4>
+
+      <p className="text-slate-400 max-w-4xl mx-auto leading-relaxed">
+        LED Video Wall Rental Services available across
+        Thane, Mumbai, Navi Mumbai, Kalyan, Dombivli,
+        Bhiwandi, Mira Road, Vasai, Virar and nearby
+        Maharashtra locations.
+      </p>
+
+    </div>
+
+  </div>
+
+  {/* Bottom */}
+
+  <div className="border-t border-slate-800">
+
+    <div className="max-w-7xl mx-auto px-5 py-6">
+
+      <p className="text-center text-sm text-slate-500">
+        © {new Date().getFullYear()} SIDDHI ENTERPRISES.
+        All Rights Reserved.
+      </p>
+
+    </div>
+
+  </div>
+</footer>
+
+
+);
 }

@@ -3,110 +3,104 @@
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import { useCallback, useEffect, useState } from "react";
 
-export default function HeroCarousel({ images, contents }) {
-  const [emblaRef, emblaApi] = useEmblaCarousel(
+const PHONE = "+912279614596";
+
+export default function HeroCarousel({ images }) {
+  const [emblaRef] = useEmblaCarousel(
     {
       loop: true,
-      align: "center",
-      skipSnaps: false,
+      dragFree: false,
     },
-    [Autoplay({ delay: 2000 })]
+    [
+      Autoplay({
+        delay: 6000,
+      }),
+    ]
   );
 
-  const [selectedIndex, setSelectedIndex] = useState(0);
-
-  const onSelect = useCallback(() => {
-    if (!emblaApi) return;
-    setSelectedIndex(emblaApi.selectedScrollSnap());
-  }, [emblaApi]);
-
-  useEffect(() => {
-    if (!emblaApi) return;
-    emblaApi.on("select", onSelect);
-    onSelect();
-  }, [emblaApi, onSelect]);
-
   return (
-    <section className="w-full mx-auto mt-20">
-      {/* Carousel */}
-      <div className="overflow-hidden rounded-xl relative" ref={emblaRef}>
+    <section className="relative mt-20">
+      {/* Background Slider */}
+      <div
+        ref={emblaRef}
+        className="overflow-hidden"
+      >
         <div className="flex">
           {images.map((src, i) => (
             <div
               key={i}
-              className="relative w-full flex-shrink-0"
-              style={{
-                aspectRatio: "16/9", // Better for mobile & desktop
-              }}
+              className="relative flex-[0_0_100%]"
             >
-              <Image
-                src={src}
-                alt={`Slide ${i + 1}`}
-                fill
-                priority={i === 0}
-                loading={i === 0 ? "eager" : "lazy"}
-                className="object-cover"
-                sizes="100vw"
-              />
-
-              {/* OVERLAY CONTENT */}
-              <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center 
-                px-4 sm:px-6">
-
-                {/* Title */}
-                <h2
-                  className="
-                    text-white 
-                    font-bold 
-                    drop-shadow-lg
-                    text-sm 
-                    leading-snug
-                    sm:text-3xl sm:leading-tight
-                    md:text-4xl
-                    max-w-[90%] sm:max-w-2xl
-                  "
-                >
-                  {contents[i].title}
-                </h2>
-
-                {/* Description */}
-                <p
-                  className="
-                    text-white/90 
-                    mt-2 
-                    text-sm 
-                    sm:text-lg 
-                    max-w-[90%] sm:max-w-2xl
-                  "
-                >
-                  {contents[i].desc}
-                </p>
-
-                {/* CTA BUTTON */}
-                <a
-                  href={contents[i].link}
-                  target="_blank"
-                  className="
-                    mt-4 
-                    px-4 py-2 
-                    sm:px-7 sm:py-3 
-                    bg-[#E8B44C] 
-                    text-white 
-                    font-medium sm:font-semibold 
-                    rounded-lg 
-                    shadow-lg 
-                    hover:bg-yellow-400 
-                    transition
-                    text-sm sm:text-base
-                  "
-                >
-                  {contents[i].cta}
-                </a>
+              <div className="relative h-[60vh] min-h-[420px] md:h-[75vh]">
+                <Image
+                  src={src}
+                  alt="LED Video Wall Rental Thane"
+                  fill
+                  priority={i === 0}
+                  sizes="100vw"
+                  className="object-cover"
+                />
               </div>
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/55" />
+
+      {/* Fixed SEO Content */}
+      <div className="absolute inset-0 z-10 flex items-center">
+        <div className="max-w-7xl mx-auto px-5 w-full">
+          <div className="max-w-3xl">
+            {/* <span className="inline-flex rounded-full bg-white/10 backdrop-blur-sm px-4 py-2 text-sm text-white">
+              ⭐ 4.5 Rated LED Display Company
+            </span> */}
+
+            <h1 className="mt-5 text-white font-bold text-3xl md:text-5xl lg:text-6xl leading-tight">
+              LED Video Wall Rental Services in Thane
+            </h1>
+
+            <p className="mt-4 text-white/90 text-base md:text-lg leading-relaxed">
+              SIDDHI ENTERPRISES provides premium indoor and outdoor
+              LED video walls for weddings, exhibitions, corporate
+              events, concerts and live events across Thane,
+              Mumbai and Navi Mumbai.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-3 mt-7">
+              <a
+                href={`tel:${PHONE}`}
+                className="px-6 py-3 rounded-lg bg-[#7C3AED] text-white font-semibold text-center"
+              >
+                Call Now
+              </a>
+
+              <a
+                href="/contact-us"
+                className="px-6 py-3 rounded-lg bg-[#EC4899] text-white font-semibold text-center"
+              >
+                Get Free Quote
+              </a>
+            </div>
+
+            <div className="flex flex-wrap gap-2 mt-6">
+              {[
+                "Indoor LED Walls",
+                "Outdoor LED Walls",
+                "Wedding Events",
+                "Corporate Events",
+              ].map((item) => (
+                <span
+                  key={item}
+                  className="text-xs md:text-sm bg-white/10 text-white px-3 py-2 rounded-full"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

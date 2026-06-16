@@ -6,6 +6,7 @@ import HomePosts from '@/components/layout/HomePosts'
 import { imagesLink, carouselContent } from '../../utils/seedData'
 import HeroCarousel from '@/components/layout/HeroCarousel';
 import TestimonialsCarousel from '@/components/layout/TestimonialsCarousel';
+import FAQSection from '@/components/layout/FAQSection';
 
 const page = () => {
   return (
@@ -14,10 +15,11 @@ const page = () => {
 
       <Hero />
        
-      <FeaturedCategories />
+      {/* <FeaturedCategories /> */}
       <HomePosts />
       <TestimonialsCarousel />
-      <CategoriesSection />
+      <FAQSection />
+      {/* <CategoriesSection /> */}
     </div>
   )
 }
