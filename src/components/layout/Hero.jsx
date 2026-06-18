@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Phone, MessageCircle } from "lucide-react";
 
-const PHONE = "+912279614596";
+const PHONE = "+919892638074";
 
 export default function Hero() {
 return ( <section className="relative overflow-hidden bg-white">
@@ -43,7 +43,7 @@ return ( <section className="relative overflow-hidden bg-white">
           </a>
 
           <a
-            href={`https://wa.me/912279614596`}
+            href={`https://wa.me/919892638074`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl border border-[#7C3AED] text-[#7C3AED] font-semibold hover:bg-purple-50 transition"

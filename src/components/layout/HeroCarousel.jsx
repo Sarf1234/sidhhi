@@ -4,8 +4,8 @@ import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
-const PHONE = "+912279614596";
-const WHATSAPP = "https://wa.me/912279614596";
+const PHONE = "+919892638074";
+const WHATSAPP = "https://wa.me/919892638074";
 
 export default function HeroCarousel({ images }) {
 const [emblaRef] = useEmblaCarousel(

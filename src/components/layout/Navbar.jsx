@@ -11,8 +11,8 @@ import {
   FileText,
 } from "lucide-react";
 
-const PHONE = "+912279614596";
-const WA_LINK = "https://wa.me/912279614596";
+const PHONE = "+919892638074";
+const WA_LINK = "https://wa.me/919892638074";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -46,7 +46,7 @@ const Navbar = () => {
             href={`tel:${PHONE}`}
             className="font-semibold hover:text-yellow-400 transition"
           >
-            Call Now: +91 2279614596
+            Call Now: +91 9892638074
           </a>
         </div>
       </div>

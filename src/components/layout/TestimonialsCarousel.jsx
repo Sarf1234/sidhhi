@@ -138,7 +138,7 @@ return ( <section className="py-20 bg-white"> <div className="max-w-7xl mx-auto 
 
     {/* <div className="mt-14 text-center">
       <a
-        href="tel:+912279614596"
+        href="tel:+919892638074"
         className="inline-flex items-center justify-center px-7 py-4 rounded-xl bg-[#7C3AED] text-white font-semibold hover:opacity-90"
       >
         Get Your Event Quote Today

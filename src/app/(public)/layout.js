@@ -125,7 +125,7 @@ export default function RootLayout({ children }) {
       "@type": "LocalBusiness",
       name: "SIDDHI ENTERPRISES",
       image: "https://yourdomain.com/logo.png",
-      telephone: "+91 2279614596",
+      telephone: "+91 9892638074",
       address: {
         "@type": "PostalAddress",
         streetAddress:

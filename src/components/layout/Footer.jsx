@@ -77,15 +77,15 @@ return ( <footer className="bg-slate-950 text-white"> <div className="max-w-7xl 
         <div className="space-y-5">
 
           <a
-            href="tel:+912279614596"
+            href="tel:+919892638074"
             className="flex items-center justify-center lg:justify-start gap-3 text-slate-400 hover:text-white transition"
           >
             <PhoneCall size={18} />
-            <span>+91 2279614596</span>
+            <span>+91 9892638074</span>
           </a>
 
           <a
-            href="https://wa.me/912279614596"
+            href="https://wa.me/919892638074"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center lg:justify-start gap-3 text-slate-400 hover:text-white transition"
