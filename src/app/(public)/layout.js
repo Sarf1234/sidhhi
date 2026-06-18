@@ -64,7 +64,7 @@ locale: "en_IN",
 
 images: [
   {
-    url: "https://res.cloudinary.com/YOUR_CLOUD/image/upload/og-image.jpg",
+    url: "https://res.cloudinary.com/dnq42wt3a/image/upload/v1781585364/posts/zsoaueillwjmwxrmvoer.jpg",
     width: 1200,
     height: 630,
     alt: "SIDDHI ENTERPRISES LED Video Wall Rental Services",

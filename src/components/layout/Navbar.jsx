@@ -31,15 +31,7 @@ const Navbar = () => {
     // { name: "Contact", slug: "/contact-us" },
   ];
 
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 40);
 
-    window.addEventListener("scroll", handleScroll, {
-      passive: true,
-    });
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <>
@@ -79,8 +71,7 @@ const Navbar = () => {
               </h2>
 
               <p className="text-xs text-slate-500">
-                LED Video Wall & Event Display Solutions
-              </p>
+                Siddhi Events              </p>
             </div>
           </Link>
 
